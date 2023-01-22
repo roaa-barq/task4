@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="task4.css" />
+    <title>Task1</title>
+  </head>
+  <body>
+    <label>Date as dd-mm-yyyy</label>
+    <label id="day"></label>
+    <br />
+    <label>Date as mm-dd-yyyy</label>
+    <label id="month"></label>
+  </body>
+
+  <script>
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    if (day < 10) day = "0" + day;
+    if (month < 10) month = "0" + month;
+
+    const dayFirst = day + "-" + month + "-" + year;
+    const monthFirst = month + "-" + day + "-" + year;
+
+    document.getElementById("day").innerHTML = dayFirst;
+    document.getElementById("month").innerHTML = monthFirst;
+  </script>
+</html>
